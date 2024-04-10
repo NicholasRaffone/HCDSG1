@@ -4,7 +4,7 @@
 
 Go to the [Reddit apps page](https://www.reddit.com/prefs/apps/) and create a new app
 
-Follow the steps in the PRAW (Python Reddit API Wrapper) Docs (here)[https://praw.readthedocs.io/en/stable/getting_started/authentication.html#password-flow]
+Follow the steps in the PRAW (Python Reddit API Wrapper) Docs [here](https://praw.readthedocs.io/en/stable/getting_started/authentication.html#password-flow)
 
 ## Using the file
 
