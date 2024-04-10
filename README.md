@@ -1,6 +1,12 @@
 # HCDS G1 Project
 
-## Installation and Running
+## Setup 
+
+Go to the [Reddit apps page](https://www.reddit.com/prefs/apps/) and create a new app
+
+Follow the steps in the PRAW (Python Reddit API Wrapper) Docs (here)[https://praw.readthedocs.io/en/stable/getting_started/authentication.html#password-flow]
+
+## Using the file
 
 Install Python and [Pipenv](https://pipenv.pypa.io/en/latest/installation.html)
 
