@@ -65,6 +65,7 @@ def clean_comment_body(body):
 
 def generate_comments_csv(reddit, submission_ids, filename):
     column_names = [
+        "post_id",
         "id",
         "permalink",
         "name",
@@ -85,7 +86,7 @@ def generate_comments_csv(reddit, submission_ids, filename):
                 continue
 
             data = defaultdict(lambda: "")
-
+            data["post_id"] = submission_id
             data["id"] = top_level_comment.id
             data["permalink"] = top_level_comment.permalink
             try:
@@ -103,7 +104,7 @@ def generate_comments_csv(reddit, submission_ids, filename):
 
 if __name__ == "__main__":
     reddit = init_reddit()
-    generate_submission_csv(reddit, "truecrime_submissions.csv")
+    # generate_submission_csv(reddit, "truecrime_submissions.csv")
     submission_csv = pd.read_csv("truecrime_submissions.csv")
     submission_ids = submission_csv["id"].tolist()
     generate_comments_csv(reddit, submission_ids, "truecrime_comments.csv")
