@@ -74,7 +74,7 @@ def generate_comments_csv(reddit, submission_ids, filename):
         "created_utc",
     ]
 
-    with open(filename, "w", newline="") as csvfile:
+    with open(filename, "w", newline="",encoding='utf-8') as csvfile:
         headerwriter = csv.writer(csvfile)
         headerwriter.writerow(column_names)
 
@@ -97,7 +97,7 @@ def generate_comments_csv(reddit, submission_ids, filename):
             data["body"] = clean_comment_body(top_level_comment.body)
             data["score"] = top_level_comment.score
             data["created_utc"] = top_level_comment.created_utc
-            with open(filename, "a", newline="") as csvfile:
+            with open(filename, "a", newline="",encoding='utf-8') as csvfile:
                 headerwriter = csv.writer(csvfile)
                 headerwriter.writerow([data[column] for column in column_names])
 
